@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"></head>
+  <form action="/" method="post"></form>
+<body>
+
+  <div class="container-fluid">
+  <section>
+  <section id="boom">
+
+    <!-- Nav Bar -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class = "navbar-brand" href="">Decision Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto">
+          <li class = "nav-item">
+            <a class="nav-link" href="/rules">Rules</a>
+          </li>
+          
+    
+          <li class = "nav-item">
+            <a class="nav-link" href="/testing">Train and Test</a>
+          </li>
+  
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  
+    <!-- Title -->
+    
+      
+        <section id ="newer">
+        <h1>"Welcome to the Decision Hub, a powerful tool designed to assist bankers, financial analysts, and
+            developers in optimizing decision-making processes. From analyzing loan applications to efficiently
+            processing data, Decision Hub is equipped to streamline your workflow and ensure informed decisions
+            at every step"</h1>
+      </section>
+          
+      </div>
+    
+  
+  </section>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Features -->
+  <section id="features">
+
+    <h3>Set rules easily and quickly.</h3>
+    <p>Define your financial decision criteria with a simple and intuitive interface.</p>
+    <br>
+    <h3>Switch rules effortlessly.</h3>
+    <p>Quickly adapt to changing circumstances by switching between pre-defined rules.</p>
+    <br>
+    <h3>Test your rules with confidence.</h3>
+    <p>Ensure optimal outcomes by simulating different scenarios and evaluating their impact.</p>
+    <br>
+     <br>
+  </section>
+  
+  <script>
+    const rulesLink = document.querySelector('.nav-item a[href="#"]');
+  
+    rulesLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = "/rules"; 
+    });
+  </script>
+  
+
+</body>
+
+</html>

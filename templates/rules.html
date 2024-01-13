@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+    <title>Rules</title>
+
+    <style>
+        #margin {
+            margin-top: 15px;
+            color: #60B775;
+        }
+
+        #title {
+            margin-left: 230px;
+        }
+
+        #De {
+            background-color: #60B775;
+        }
+
+        #xyz {
+            background-color: #60B775;
+
+        }
+
+        .new {
+            background-color: #60B775;
+            margin-top: 0px;
+        }
+
+        #margina {
+            margin-left: 0.5em;
+            color: #60B775;
+        }
+
+        #marginax {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 70px;
+            padding-right: 0%;
+            margin-right: 0%;
+            font-size: 3em;
+            color: white;
+        }
+
+        #ronaldo {
+            margin-top: 50px;
+            margin-bottom: 70px;
+            font-size: 25px;
+            color: #60B775
+        }
+
+
+        #color {
+            margin: 0px;
+        }
+
+        .nav-link {
+            color: white;
+
+        }
+
+
+        .right-box {
+            width: 100%;
+            height: 400px;
+            /* Adjust the width according to your design */
+            background-color: white;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            border: 2px solid #60B775;
+            font-size: 25px;
+            color: #60B775;
+            padding: 20px;
+            overflow: auto;
+            /* Add padding for better visibility */
+        }
+
+        .container {
+            padding-left: 130px;
+            margin-left: 100px;
+            margin-right: 30px;
+        }
+
+        .container2 {
+            padding-top: 30px;
+            margin-right: 230px;
+            margin-left: 60px;
+        }
+
+        #title {
+            margin-right: auto;
+            /* Pushes "Testing" to the left */
+        }
+
+        .nav-link {
+            margin-left: 20px;
+            margin-right: 30px;
+            /* Adjust this value based on your preference for spacing */
+        }
+
+        #last {
+            margin-right: 230px;
+        }
+
+        #hiny {
+            font-size: xx-large;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <form action="/rules" method="post" id="xyz">
+
+        <div class="child">
+            <br>
+            <div id="marginax">
+                <span id="title">Rules</span>
+                <a class="nav-link" href="/">
+                    <h5>Homepage</h5>
+                </a>
+                <a class="nav-link" id="last" href="/testing">
+                    <h5>Train and Test</h5>
+                </a>
+            </div>
+        </div>
+
+        <hr id="color">
+    </form>
+
+
+
+
+    <div style="display: flex;">
+        <div style="flex: 1;">
+            <div class="container">
+                <br>
+                <form action="/rules" method="post" id="ruleForm">
+
+                    <div id="ronaldo" class="row">
+                        <div class="col-md-6">
+                            <label for="ruleName">Rule Name:</label> <br>
+                            <input type="text" name="rule" id="ruleNameInput" placeholder="Name" class="form-control">
+                            <br>
+                        </div>
+
+                        <div class="col-md-10">
+                            <label for="ruleTesting">Enter Rule:</label> <br>
+                            <input type="text" name="input" id="ruleTestingInput" placeholder="Input"
+                                class="form-control"> <br>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <input type="Submit" value="Save Rule" class="btn btn-secondary" id="De">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div style="flex: 1;">
+            <div class="container2">
+                <div class="right-box">
+                    <p id="hiny">LOG
+                        <hr id="color">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("ruleForm").addEventListener("submit", function (event) {
+            // Save the rule name value
+            var ruleNameValue = document.getElementById("ruleNameInput").value;
+            // Save the rule name value in localStorage
+            localStorage.setItem('userRule', ruleNameValue);
+    
+            // Focus on the rule testing input
+            document.getElementById("ruleTestingInput").focus();
+        });
+    
+        // Retrieve and set the saved rule from localStorage on page load
+        var storedRule = localStorage.getItem('userRule');
+        if (storedRule) {
+            document.getElementById('ruleNameInput').value = storedRule;
+            document.getElementById('ruleTestingInput').focus(); // Focus on the rule testing input
+        }
+    </script>
+
+    
+
+</body>
+
+
+</html>
