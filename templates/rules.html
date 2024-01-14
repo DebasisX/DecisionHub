@@ -116,6 +116,11 @@
         #hiny {
             font-size: xx-large;
         }
+        #content {
+            margin-left: 230px;
+            color:#60B775;
+            margin-right: 930px;
+        }
     </style>
     
 </head>
@@ -140,7 +145,7 @@
     </form>
 
 
-
+    
 
     <div style="display: flex;">
         <div style="flex: 1;">
@@ -179,6 +184,25 @@
             </div>
         </div>
     </div>
+    <br><br>
+    <div id="content"><h5>
+        Rule Name can be Anything.<br>
+        In the input field, you can directly assign values to your variables.<br>
+        Some variables are predefined. Eg: baserate, creditscore, interest, income, employment.<br>
+        <br>
+        Rules like multiple direct assignment and conditional statement (and) are accepted.<br>
+        Rule Format:<br>
+        Direct Assignment: (variable) = (value)<br>
+        Conditions: if (variable (=, >, <=, !=, <, >=) value) then (variable = value)
+        <br><br>
+        Example:<br>
+        baserate = 12.7<br>
+        interest = 12.7<br>
+        if creditscore > 890 and income >= 500000 then interest = 10.2 <br>
+    </div>
+    <br><br><br>
+    <hr>
+    <br><br><br>
     <script>
         document.getElementById("ruleForm").addEventListener("submit", function (event) {
             // Save the rule name value
